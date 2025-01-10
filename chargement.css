@@ -1,0 +1,48 @@
+/* Styles pour le corps de la page */
+body {
+    display: flex; /* Utilise Flexbox pour centrer le contenu */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    min-height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+    background: #000; /* Couleur de fond */
+  }
+  
+  /* Styles pour le conteneur de chargement */
+  .loading {
+    max-width: 50%; /* Taille maximale du conteneur */
+    line-height: 1.5; /* Espacement entre les lignes */
+    font-size: 1.2rem; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centre le texte */
+  }
+  
+  /* Styles pour le texte de l'auteur */
+  .loading__author {
+    font-weight: normal; /* Enlève le gras du texte */
+    font-size: 1rem; /* Réduit la taille de la police */
+    color: #dee2e6; /* Couleur de texte */
+    margin: 0.6rem 0 2rem 0; /* Ajoute des marges autour du texte */
+    display: block; /* Assure que le texte de l'auteur est sur une nouvelle ligne */
+  }
+  
+  /* Styles pour l'animation de chargement */
+  .loading__anim {
+    width: 35px; /* Définit la taille du cercle */
+    height: 35px; /* Définit la taille du cercle */
+    display: inline-block; /* Assure que le cercle est sur une nouvelle ligne */
+    border: 5px solid rgba(189, 189, 189, 0.25); /* Définit une bordure grise pour le cercle */
+    border-left-color: rgba(3, 155, 229, 1); /* Change la couleur de la bordure gauche */
+    border-top-color: rgba(3, 155, 229, 1); /* Change la couleur de la bordure supérieure */
+    border-radius: 50%; /* Rend le cercle parfaitement rond */
+    animation: rotate 600ms infinite linear; /* Applique une animation de rotation */
+  }
+  
+  /* Définition de l'animation */
+  @keyframes rotate {
+    from {
+      transform: rotate(0); /* Début de l'animation : l'élément n'est pas tourné (0 degré) */
+    }
+    to {
+      transform: rotate(1turn); /* Fin de l'animation : l'élément a effectué une rotation complète (360 degrés) */
+    }
+  }
